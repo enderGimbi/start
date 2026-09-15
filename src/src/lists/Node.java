@@ -11,7 +11,7 @@ public class Node<T1> {
 
     public Node(T1 value) {
         this.value = value;
-        this.next = new Node<T1>();
+        this.next = null;
     }
 
     public Node(T1 value, Node<T1> next) {
@@ -26,5 +26,10 @@ public class Node<T1> {
 
     public void setValue(T1 value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return this.value.toString();
     }
 }
