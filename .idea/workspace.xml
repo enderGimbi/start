@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcc9c592-ce0a-447c-b44d-22a64a26128a" name="Changes" comment="починка проекта">
-      <change afterPath="$PROJECT_DIR$/src/src/lists/ListStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/lists/QueueStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/lists/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/lists/StackStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/lists/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/lists/ListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/lists/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/lists/Node.java" afterDir="false" />
-    </list>
+    <list default="true" id="fcc9c592-ce0a-447c-b44d-22a64a26128a" name="Changes" comment="починка проекта" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +53,9 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.stickyLines"
   }
 }]]></component>
