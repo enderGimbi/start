@@ -1,4 +1,4 @@
-package src.lists;
+package lists;
 
 public class StackStrategy<T1> implements ListStrategy{
 

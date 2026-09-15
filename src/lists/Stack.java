@@ -1,38 +1,33 @@
-package src.lists;
+package lists;
 
-public class QueueStrategy<T1> implements ListStrategy{
+public class Stack<T1> {
 
     Node<T1> head;
     int length;
 
-    public QueueStrategy() {
-        this.head=null;
+    public Stack() {
+        this.head =null;
         this.length=0;
     }
 
-    public QueueStrategy(Node<T1> head) {
+    public Stack(Node<T1> head) {
         this.head = head;
         this.length=1;
     }
 
-
-    @Override
-    public <T2> void add(T2 newEl) {
+    public void add(T1 newEl){
         if(this.length==0){
-            this.head = new Node<T1>((T1)newEl);
+            this.head = new Node<>(newEl);
             this.length++;
             return;
         }
-        Node<T1> cache = this.head;
-        while(cache.next!=null){
-            cache = cache.next;
-        }
-        cache.next=new Node<T1>((T1)newEl);
+        var nEl = new Node<>(newEl);
+        nEl.next=this.head;
+        this.head = nEl;
         this.length++;
     }
 
-    @Override
-    public void delete() {
+    public void delete(){
         if(this.length==0) return;
         this.length--;
         this.head=this.head.next;

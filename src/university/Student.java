@@ -1,4 +1,4 @@
-package src.university;
+package university;
 
 public class Student {
     private String firstname;

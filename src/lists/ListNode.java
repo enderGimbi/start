@@ -1,4 +1,4 @@
-package src.lists;
+package lists;
 
 public class ListNode<T1> {
     Node<T1> head;

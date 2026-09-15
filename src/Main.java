@@ -1,9 +1,5 @@
-package src;
-
-
-import src.lists.QueueStrategy;
-import src.lists.Stack;
-import src.lists.StackStrategy;
+import lists.QueueStrategy;
+import lists.StackStrategy;
 
 public class Main {
     public static void main(String[] args) {

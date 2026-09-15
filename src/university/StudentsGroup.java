@@ -1,23 +1,31 @@
-package src.university;
+package university;
 
 import java.util.ArrayList;
 
-public class facultyGroup implements Trainees {
+public class StudentsGroup implements Trainees {
+    private int numberOfGroup;
     private String facultyName;
+    private int course;
     private ArrayList<Student> listOfStudents;
 
-    public facultyGroup() {
+    public StudentsGroup() {
+        this.numberOfGroup = 0;
         this.facultyName = "noname";
+        this.course = 0;
         this.listOfStudents = new ArrayList<>();
     }
 
-    public facultyGroup(String facultyName) {
+    public StudentsGroup(int numberOfGroup, String facultyName, int course) {
+        this.numberOfGroup = numberOfGroup;
         this.facultyName = facultyName;
+        this.course = course;
         this.listOfStudents = new ArrayList<>();
     }
 
-    public facultyGroup(String facultyName, ArrayList<Student> listOfStudents) {
+    public StudentsGroup(int numberOfGroup, String facultyName, int course, ArrayList<Student> listOfStudents) {
+        this.numberOfGroup = numberOfGroup;
         this.facultyName = facultyName;
+        this.course = course;
         this.listOfStudents = listOfStudents;
     }
 
@@ -38,12 +46,28 @@ public class facultyGroup implements Trainees {
         this.listOfStudents.add(newStudent);
     }
 
+    public int getNumberOfGroup() {
+        return numberOfGroup;
+    }
+
+    public void setNumberOfGroup(int numberOfGroup) {
+        this.numberOfGroup = numberOfGroup;
+    }
+
     public String getFacultyName() {
         return facultyName;
     }
 
     public void setFacultyName(String facultyName) {
         this.facultyName = facultyName;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
     }
 
     public ArrayList<Student> getListOfStudents() {
@@ -56,6 +80,6 @@ public class facultyGroup implements Trainees {
 
     @Override
     public String toString() {
-        return String.format("Название факультета: %s\nСписок студентов: \n%s",facultyName,listOfStudents);
+        return String.format("Номер группы: %s\nНазвание факультета: %s\nНомер курса: %s\nСписок студентов: \n%s",numberOfGroup,facultyName,numberOfGroup,listOfStudents);
     }
 }

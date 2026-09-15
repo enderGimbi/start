@@ -1,4 +1,4 @@
-package src.lists;
+package lists;
 
 public class Node<T1> {
      private T1 value;

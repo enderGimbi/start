@@ -1,4 +1,4 @@
-package src.university;
+package university;
 
 public interface Trainees {
     void expulsion(Student a);
