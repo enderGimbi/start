@@ -1,63 +1,47 @@
 package lists;
 
-public class ListNode<T1> {
-    Node<T1> head;
+public class ListNode<T> {
+    Node<T> head;
     int length;
+    ListStrategy<T> strategy;
 
-    public ListNode() {
-        this.head = null;
-        this.length = 0;
+    public ListNode(ListStrategy<T> strategy) {
+        this.strategy = strategy;
+        this.head=null;
+        this.length=0;
     }
 
-    public ListNode(Node<T1> head) {
-        this.head = head;
-        this.length=1;
-    }
-
-    public void add(T1 newEl){
-        if(this.length==0){
-            this.head = new Node<>(newEl);
-            this.length++;
-            return;
-        }
-        var cache = this.head;
-        while(cache.next!=null){
-            cache = cache.next;
-        }
-        cache.next=new Node<T1>(newEl);
+    public void add(T newEl){
+        var newNode = new Node<>(newEl);
+        this.head=this.strategy.add(head,newNode);
         this.length++;
     }
 
-    public void addNode(Node<T1> node){
-        if(this.length==0){
-            this.head = node;
-            this.length++;
-            return;
-        }
-        var cache = this.head;
-        while(cache.next!=null){
-            cache = cache.next;
-        }
-        cache.next=node;
-        this.length++;
+    public void delete(){
+        this.head = this.strategy.delete(head);
+        this.length--;
     }
 
-    public void deleteEl(T1 el){
+    public void deleteEl(T el){
         var cache = this.head;
         if(this.head.getValue()==el){
             this.head=this.head.next;
             this.length--;
             return;
         }
-        Node<T1> prev = null;
+        Node<T> prev = null;
         while(cache.next!=null || cache.getValue()==el){
             prev = cache;
             cache = cache.next;
         }
-        if(cache.next==null&&cache.getValue()!=el) return;
+        if((cache.next==null&&cache.getValue()!=el)||prev==null) return;
         prev.next=cache.next;
         cache.next=null;
         this.length--;
+    }
+
+    public void setStrategy(ListStrategy<T> strategy){
+        this.strategy = strategy;
     }
 
     @Override
@@ -76,4 +60,5 @@ public class ListNode<T1> {
         cache.append("}");
         return cache.toString();
     }
+
 }
